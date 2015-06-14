@@ -37,7 +37,7 @@ def main(argv):
     """
     Main
     """
-    configFile = "/config/config.yml"
+    configFile = "/config/devices.yml"
     mqttHost = os.getenv('MQTT_HOST', 'localhost')
     mqttPort = int(os.getenv('MQTT_PORT', '1883'))
     mqttTopic = os.getenv('MQTT_TOPIC', '/gateway/ble')
