@@ -1,0 +1,23 @@
+# Configuration file for Gammu SMS Daemon
+[gammu]
+port = /dev/ttyUSB0
+connection = at19200
+# Debugging
+#logformat = textall
+
+# SMSD configuration, see gammu-smsdrc(5)
+[smsd]
+PIN = 1234
+CommTimeout = 5
+#RunOnReceive = /app/sms2mqtt.sh
+RunOnReceive = /home/pi/github/docker-rpi/rpi-mqtt-sms/src/sms2mqtt.sh
+service = files
+logfile = syslog
+# Increase for debugging information
+debuglevel = 0
+
+# Paths where messages are stored
+inboxpath = /var/spool/gammu/inbox/
+outboxpath = /var/spool/gammu/outbox/
+sentsmspath = /var/spool/gammu/sent/
+errorsmspath = /var/spool/gammu/error/
