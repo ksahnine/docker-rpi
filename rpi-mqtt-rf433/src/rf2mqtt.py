@@ -52,6 +52,9 @@ def connect():
         logger.info("Connection failed with error code %s. Retrying", result)
         time.sleep(10)
         connect()
+        sniffer = RFSniffer(client, mqttPubTopic, logLevel)
+        sniffer.start()
+        client.loop_forever()
 
     # On message / On connect / On disconnect
     client.on_message = on_message
@@ -81,7 +84,6 @@ def on_disconnect(client, userdata, rc):
         logger.info("Something was wrong. Return code %s. Reconnecting" % rc)
         time.sleep(5)
         connect()
-        #main_loop()
 
 def on_message(client, userdata, message):
     """
@@ -90,13 +92,6 @@ def on_message(client, userdata, message):
     """
     logger.log(logging.DEBUG, "Message [%s] from topic [%s]" % (message.payload, message.topic))
     logger.log(logging.DEBUG, "Sending RF433 code [%s]" % message.payload)
-
-def main_loop():
-    """
-    Stay connected to the broker
-    """
-    while client.loop() == 0:
-        logger.info("MQTT / RF433 gateway ready")
 
 def main(argv):
     """
@@ -160,7 +155,6 @@ def main(argv):
     sniffer = RFSniffer(client, mqttPubTopic, logLevel)
     sniffer.start()
     client.loop_forever()
-    #main_loop()
 
 if __name__ == "__main__":
     main(sys.argv[1:])
