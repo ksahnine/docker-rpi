@@ -2,7 +2,7 @@
 #   docker build -t ksahnine/rpi-mqtt-sms .
 #
 # Run:
-#   docker run --privileged -td ksahnine/rpi-mqtt-sms
+#   docker run --privileged -v ~/docker-rpi/rpi-mqtt-sms/src/conf:/config -v /tmp:/tmp -e "MQTT_HOST=192.168.0.21" -t ksahnine/rpi-mqtt-sms
 #
 # DOCKER_VERSION 1.6
 

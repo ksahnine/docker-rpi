@@ -2,8 +2,6 @@
 ########################
 # send_sms.sh <phone_num> <message>
 
-GAMMU_CONFIG=./conf/gammu-smsdrc
-
 PhonNum=$1
 Message=$2
 GammuConfig=$3

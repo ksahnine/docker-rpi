@@ -2,7 +2,6 @@
 ########################
 # starts.sh
 
-GAMMU_CONFIG=./conf/gammu-smsdrc
 # Starts the SMS gateway daemon
 gammu-smsd -c $GAMMU_CONFIG -d
 RC=$?
