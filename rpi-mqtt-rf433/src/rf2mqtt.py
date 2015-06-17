@@ -105,8 +105,8 @@ def main(argv):
     global mqttPort
     global mqttSubTopic
     global mqttPubTopic
-    recvPin   = int(os.getenv('recvPin', '24'))
-    sendPin   = int(os.getenv('sendPin', '24'))
+    recvPin   = int(os.getenv('RECV_PIN', '2'))
+    sendPin   = int(os.getenv('SEND_PIN', '0'))
     logger = logging.getLogger()
     handler = logging.StreamHandler(sys.stdout)
 
