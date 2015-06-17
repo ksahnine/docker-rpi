@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     usb-modeswitch \
     gammu-smsd \
-    mosquitto-client \
+    mosquitto-clients \
     --no-install-recommends
 
 # Install Python RPi GPIO
