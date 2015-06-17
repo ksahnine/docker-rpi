@@ -1,3 +1,7 @@
+__author__  = "Kadda SAHNINE"
+__contact__ = "ksahnine@gmail.com"
+__license__ = 'GPL v3'
+
 import threading 
 import logging 
 import subprocess 
