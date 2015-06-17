@@ -1,8 +1,8 @@
 # Build:
-#   docker build -t ksahnine/rpi-sms-daemon .
+#   docker build -t ksahnine/rpi-mqtt-sms .
 #
 # Run:
-#   docker run -td -p 80:5000 ksahnine/rpi-sms-daemon
+#   docker run --privileged -td ksahnine/rpi-mqtt-sms
 #
 # DOCKER_VERSION 1.6
 
