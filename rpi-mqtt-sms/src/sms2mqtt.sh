@@ -13,7 +13,7 @@ INBOX=/var/spool/gammu/inbox
 
 RC=0
 for ID in "$@" ; do
-    mosquitto_pub -h $MQTT_HOST -p MQTT_PORT -t $MQTT_TOPIC -m "`cat $INBOX/$ID`"
+    mosquitto_pub -h $MQTT_HOST -p $MQTT_PORT -t $MQTT_TOPIC -m "`cat $INBOX/$ID`"
     if [ $RC -ne 0 ]
     then
         RC=$?
