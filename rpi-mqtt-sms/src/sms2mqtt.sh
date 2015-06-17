@@ -8,7 +8,7 @@ echo $@ >> /tmp/sms2mqtt.log
 # It publishes the SMS message to the given topic parameter
 MQTT_HOST=$1
 MQTT_PORT=$2
-MQTT_TOPIC=$3
+MQTT_PUB_TOPIC=$3
 INBOX=/var/spool/gammu/inbox
 
 RC=0

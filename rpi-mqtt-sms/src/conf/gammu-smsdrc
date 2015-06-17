@@ -9,8 +9,8 @@ connection = at19200
 [smsd]
 PIN = 1234
 CommTimeout = 5
-#RunOnReceive = /app/sms2mqtt.sh
-RunOnReceive = /home/pi/github/docker-rpi/rpi-mqtt-sms/src/sms2mqtt.sh
+RunOnReceive = /app/sms2mqtt.sh
+#RunOnReceive = /home/pi/github/docker-rpi/rpi-mqtt-sms/src/sms2mqtt.sh
 service = files
 logfile = syslog
 # Increase for debugging information
